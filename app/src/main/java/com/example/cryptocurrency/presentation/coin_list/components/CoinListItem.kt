@@ -20,24 +20,24 @@ import com.example.cryptocurrency.domain.model.Coin
 
 @Composable
 fun CoinListItem(
-    coin : Coin,
-    onItemClick : (Coin) -> Unit
-    ) {
+    coin: Coin,
+    onItemClick: (Coin) -> Unit
+) {
     Row(
         modifier = Modifier
             .fillMaxWidth()
             .clickable { onItemClick(coin) }
             .padding(20.dp),
         horizontalArrangement = Arrangement.SpaceBetween
-    ){
+    ) {
         Text(
             text = "${coin.rank}. ${coin.name} (${coin.symbol})",
             style = MaterialTheme.typography.body1,
             overflow = TextOverflow.Ellipsis
         )
         Text(
-            text = if(coin.isActive) "active" else "inactive",
-            color = if(coin.isActive) Color.Green else Color.Red,
+            text = if (coin.isActive) "active" else "inactive",
+            color = if (coin.isActive) Color.Green else Color.Red,
             fontStyle = FontStyle.Italic,
             textAlign = TextAlign.End,
             style = MaterialTheme.typography.body2,
