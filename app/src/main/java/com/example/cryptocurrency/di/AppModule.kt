@@ -1,6 +1,5 @@
 package com.example.cryptocurrency.di
 
-import android.app.Application
 import com.example.cryptocurrency.common.Constants
 import com.example.cryptocurrency.data.remote.CoinPaprikaApi
 import com.example.cryptocurrency.data.repository.CoinRepositoryImpl
